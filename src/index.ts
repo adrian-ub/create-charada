@@ -281,6 +281,10 @@ async function init() {
 
   pkg.name = packageName
 
+  if (template && template.startsWith('lib-')) {
+    delete pkg.private
+  }
+
   write('package.json', `${JSON.stringify(pkg, null, 2)}\n`)
 
   let doneMessage = ''
