@@ -8,6 +8,56 @@
 
 Scaffold your first project
 
+With NPM:
+
+```bash
+npm create charada@latest
+```
+
+With Yarn:
+
+```bash
+yarn create charada
+```
+
+With PNPM:
+
+```bash
+pnpm create charada
+```
+
+With Bun:
+
+```bash
+bun create charada
+```
+
+Then follow the prompts!
+
+You can also directly specify the project name and the template you want to use via additional command line options. For example, to scaffold a Vite + Angular project, run:
+
+```bash
+# npm 7+, extra double-dash is needed:
+npm create charada@latest my-angular-app -- --template angular-vite
+
+# yarn
+yarn create charada my-angular-app --template angular-vite
+
+# pnpm
+pnpm create charada my-angular-app --template angular-vite
+
+# Bun
+bun create charada my-angular-app --template angular-vite
+```
+
+Currently supported template presets include:
+
+- `lib-angular-vite`
+- `angular-vite`
+- `angular-tailwind`
+
+You can use `.` for the project name to scaffold in the current directory.
+
 ## Sponsors
 
 <p align="center">
