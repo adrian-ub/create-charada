@@ -15,8 +15,7 @@
     "url": "https://github.com/adrian-ub/create-charada/issues"
   },
   "bin": {
-    "create-charada": "index.js",
-    "cva": "index.js"
+    "create-charada": "index.js"
   },
   "files": [
     "dist",
@@ -29,6 +28,7 @@
   "scripts": {
     "dev": "tsdown --watch",
     "build": "tsdown",
+    "start": "tsx src/index.ts",
     "typecheck": "tsc",
     "prepublishOnly": "npm run build",
     "test": "vitest run",

@@ -12,6 +12,7 @@ const {
   blue,
   red,
   magenta,
+  yellow,
 } = colors
 
 const argv = mri<{
@@ -36,8 +37,10 @@ Options:
   -t, --template NAME        use a specific template
 
 Available templates:
+${yellow('lib-angular-vite     Library - Angular + Vite')}
 ${red('angular-tailwind     Angular + Tailwind')}
-${magenta('angular-vite        Angular + Vite')}`
+${magenta('angular-vite        Angular + Vite')}
+`
 
 type ColorFunc = (str: string | number) => string
 interface Framework {
@@ -54,6 +57,18 @@ interface FrameworkVariant {
 }
 
 const FRAMEWORKS: Framework[] = [
+  {
+    name: 'lib',
+    display: 'Library',
+    color: yellow,
+    variants: [
+      {
+        name: 'lib-angular-vite',
+        display: 'Angular + Vite',
+        color: magenta,
+      },
+    ],
+  },
   {
     name: 'angular',
     display: 'Angular',
