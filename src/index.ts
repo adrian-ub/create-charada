@@ -11,6 +11,7 @@ import colors from 'picocolors'
 const {
   blue,
   red,
+  magenta,
 } = colors
 
 const argv = mri<{
@@ -35,7 +36,8 @@ Options:
   -t, --template NAME        use a specific template
 
 Available templates:
-${red('angular-tailwind     Angular + Tailwind')}`
+${red('angular-tailwind     Angular + Tailwind')}
+${magenta('angular-vite        Angular + Vite')}`
 
 type ColorFunc = (str: string | number) => string
 interface Framework {
@@ -58,6 +60,11 @@ const FRAMEWORKS: Framework[] = [
     color: red,
     variants: [
       {
+        name: 'angular-vite',
+        display: 'Angular + Vite',
+        color: magenta,
+      },
+      {
         name: 'angular-tailwind',
         display: 'Angular + Tailwind',
         color: blue,
@@ -75,7 +82,7 @@ const renameFiles: Record<string, string | undefined> = {
   _gitignore: '.gitignore',
 }
 
-const defaultTargetDir = 'vite-project'
+const defaultTargetDir = 'charada-project'
 
 async function init() {
   const argTargetDir = argv._[0]
