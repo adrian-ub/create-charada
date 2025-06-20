@@ -11,3 +11,4 @@ node_modules
 temp
 **/pnpm-lock.yaml
 !/pnpm-lock.yaml
+charada-project
